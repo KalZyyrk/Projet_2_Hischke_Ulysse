@@ -121,20 +121,25 @@ nav {
     text-align: center;
     vertical-align: center;
 }
-.hosting {
+#hosting {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    height: 800px;
 }
 .hosting-main{
     width: 63%;
     background-color: #F2F2F2;
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .hosting-list {
     display: flex;
     flex-wrap: wrap;
+    height: 75%;
 }
 .hosting-popular {
     display: flex;
@@ -147,16 +152,17 @@ nav {
     text-decoration: none;
     color: black;
     margin: 1rem;
-    height: 33%;
-}
-.popular-annonce {
+    height: 25%;
     display: flex;
     background-color: white;
     border-radius: 15px;
     padding: 0.2rem;
     justify-content: space-between;
-    height: 100%;
     box-shadow: 0 10px 10px #949494;
+    transition: 300ms;
+}
+.popular-link:hover {
+    scale: 1.03;
 }
 .popular-img {
     width: 45%;
@@ -168,6 +174,9 @@ nav {
 .popular-desc {
     width: 65%;
     margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .popular-title {
     font-weight: bold;
@@ -175,8 +184,7 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
 }
-.popular-rate {
-   margin-top: 5rem; 
+.popular-rate { 
    margin-bottom: 0.8rem;
 }
 
@@ -189,31 +197,41 @@ nav {
     margin-top: 1.2rem;
     margin-right: 1.3rem;
 }
-.host-annonce {
+.host-link {
     background-color: white;
     border-radius: 15px;
     padding: 0.2rem;
     box-shadow: 0 10px 10px #949494;
     margin: 1rem;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    width: 28%;
+    height: 50%;
+    transition: 300ms;
+}
+.host-link:hover {
+    scale: 1.03;
+}
+.host-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+    margin-left: 0.5rem;
 }
 .hosting-popular h2 {
     margin: 1rem;
 }
-
 .host-annonce-p {
     background-color: white;
     padding: 0.2rem;
     border-radius: 15px;
     margin:0 1rem 1rem 1rem;
 }
-.host-link{
-    margin-top: 1rem;
-    text-decoration: none;
-    color: black;
-    width: 33%;
-}
+
 .host-img {
-    height: 50px;
+    height: 45%;
     background-size: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 15px;
@@ -221,8 +239,13 @@ nav {
     padding: 2rem;
     background-position: center;
 }
+.host-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .host-view-more {
-    margin-top: 3rem;
+    margin-top: 6rem;
     font-weight: 700;
 }
 .annonce-1{
@@ -256,30 +279,42 @@ nav {
     margin-top: 0.2rem;
     font-weight: 700;
 }
+.host-rate {
+    margin-left: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+.fa-star {
+    margin-left: -2px;
+}
 .blue-star {
     color: #0065FC;
 }
 .grey-star{
     color: #F2F2F2;
 }
-.activity {
+#activity {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
         column-gap: 2rem;
         margin-bottom: 2rem;
 }
-.activity a {
+#activity a:hover {
+    scale: 1.03;
+}
+#activity a {
     text-decoration: none;
     color: black;
     border-radius: 15px;
     box-shadow: 0 10px 10px #949494;
+    cursor: pointer;
+    transition: 300ms
 }
 .activity-1 {
     grid-column: 1/2;
     grid-row: 2/7;
 }
-.activity h3 {
+#activity h3 {
     margin: 1rem;
 }
 .activity-1 > .activity-img {
@@ -350,12 +385,19 @@ footer li {
 footer ul {
     margin-top: 2rem;
 }
+
+@media screen and (max-width: 1143px) {
+    .host-link {
+        width: 27.1%;
+    }
+}
 @media screen and (max-width: 992px) {
-    .hosting {
-        flex-direction: column-reverse;     
+    #hosting {
+        flex-direction: column-reverse;    
+        height: auto; 
     }
     .hosting-main {
-        width: 94%;
+        width: 100%;
         margin-top: 1rem;
         border-radius: 0;
         background-color: #F2F2F2;
@@ -365,7 +407,27 @@ footer ul {
         border-radius: 0;
     }
     .host-link {
-        width: 50%;
+        width: 45%;
+        height: 250px;
+    }
+    .popular-link {
+        height: 150px;
+    }
+    #activity {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #activity h2 {
+        width: 100%;
+        margin-left: 1rem;
+    }
+    #activity a {
+        width: 100%;
+        margin: 1rem;
+        height: 150px;
+    }
+    #activity .activity-img {
+        height: 67%;
     }
 
 }
@@ -418,10 +480,11 @@ footer ul {
     .host-link {
         width: 100%;
     }
-    .activity {
+    #activity {
         display: flex;
         flex-direction: column;
         margin: 1rem;
+        width: 95%;
     }
     .hosting-main {
         background-color: white;
@@ -434,15 +497,16 @@ footer ul {
     .host-view-more {
         margin-left: 1rem;
     }
-    .activity a {
+    #activity a {
         height: 200px;
-        margin-top: 2rem;
-    
+        margin: 2rem 0 0 0;
+        width: 100%;
     }
-    .activity .activity-img {
+    #activity .activity-img {
         height: 70%;
     }
     footer {
         flex-direction: column;
     }
 }
+
