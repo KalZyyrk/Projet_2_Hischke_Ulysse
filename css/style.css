@@ -401,6 +401,14 @@ footer ul {
         margin-top: 1rem;
         border-radius: 0;
         background-color: #F2F2F2;
+        padding: 0;
+    }
+    .hosting-main h2 {
+        margin-left: 1rem;
+    }
+    .host-view-more {
+        margin-left: 1rem;
+        margin-top: 1rem;
     }
     .hosting-popular{
         width: 100%;
