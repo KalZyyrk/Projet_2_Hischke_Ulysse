@@ -78,7 +78,7 @@ nav {
     border-bottom-right-radius: 10px;
 }
 
-#loc-submit i {
+#loc-submit svg {
     display: none;
 }
 
