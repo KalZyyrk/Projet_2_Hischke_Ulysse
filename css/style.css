@@ -586,7 +586,7 @@ footer ul {
         display: none;
     }
 
-    #loc-submit i {
+    #loc-submit svg {
         display: contents;
     }
 
